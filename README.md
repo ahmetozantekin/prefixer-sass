@@ -2,8 +2,10 @@
 add prefix your css
 
 ## Using
-
+```
 Download
+```
+
 ```
 // Import
 @import "prefixer";
@@ -39,3 +41,6 @@ Download
 * .transition(@args)
 * (fuckin) FLEX
 
+
+### License
+Public License (Unlicense)
