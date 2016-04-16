@@ -1,0 +1,41 @@
+/// Mixin prefixer
+@mixin prefixer($property, $value) {
+        #{$property}: $value;
+        -webkit-#{$property}: $value;
+        -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+        -o-#{$property}: $value;
+}
+/*include prefixer(transform, scale(1.2))*/
+
+/// Mixin shadower
+@mixin shadow($horizontal, $vertical, $blurRadius , $spreadRadius, $color) {
+         box-shadow:$horizontal, $vertical, $blurRadius , $spreadRadius, $color;
+        -webkit-box-shadow:$horizontal, $vertical, $blurRadius , $spreadRadius, $color;
+        -moz-box-shadow:$horizontal, $vertical, $blurRadius , $spreadRadius, $color;
+        -ms-box-shadow:$horizontal, $vertical, $blurRadius , $spreadRadius, $color;
+        -o-box-shadow:$horizontal, $vertical, $blurRadius , $spreadRadius, $color;
+}
+/*include shadower(1, 1, 5, 15, #080808)*/
+
+
+/// Mixin marginCreator
+@mixin marginCreator($min, $max){
+    
+    @for $i from $min through $max{
+        .m-#{$i}{
+            margin: #{$i}px
+        }
+    }
+}
+
+
+/// Mixin paddingCreator
+@mixin paddingCreator($min, $max){
+    
+    @for $i from $min through $max{
+        .m-#{$i}{
+            padding: #{$i}px
+        }
+    }
+}
